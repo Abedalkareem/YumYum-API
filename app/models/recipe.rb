@@ -1,4 +1,9 @@
 class Recipe < ApplicationRecord
-  belongs_to :steps
-  belongs_to :ingredients
+  has_many :steps
+  has_many :ingredients
+  belongs_to :user, optional: true
+
+  accepts_nested_attributes_for :steps
+  accepts_nested_attributes_for :ingredients
+
 end
