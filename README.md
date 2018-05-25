@@ -5,7 +5,7 @@
 <h4>-Get all recipes</h4> 
 
 `GET /recipes` <br>
-will return:
+Response:
 
 ```json
 {
@@ -71,3 +71,33 @@ Parameters: <br>
 "ingredients_attributes":[{"description": "Jameed"}]
 }
 ```
+
+<h4>-Delete recipe</h4>
+
+`DELETE /recipes/:id` <br>
+Response:
+
+```json
+{
+    "message": "Recipe deleted"
+}
+```
+
+# TODO
+- Add user
+- Edit user
+- Get user
+- Authentication
+- Recipes by user
+- Edit step
+- Delete step
+- Edit ingredient
+- Delete ingredient
+- Add rating 
+- Delete rating 
+- Edit rating
+- Get ratings
+- Add keywords for recipes
+- Search for recipes
+
+
