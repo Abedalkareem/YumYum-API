@@ -1,8 +1,9 @@
 # YumYum-API
 
-Recipes
+<h2>Recipes</h2>
 
-Get all recipes <br>
+<h4>Get all recipes</h4><br>
+
 `GET /recipes` <br>
 will return:
 
@@ -39,8 +40,25 @@ will return:
 }
 ```
 
-Add new recipe <br>
+<h4>Add new recipe</h4> <br>
+
 `POST /recipes` <br>
+Parameters: <br>
+
+```json
+{
+"name":"lolox",
+"description":"koko",
+"duration":20,
+"image":"image",
+"steps_attributes":[{"order": 1, "description": "Wash meat cubes and place in tray with lid", "image":""}],
+"ingredients_attributes":[{"description": "Jameed"}]
+}
+```
+
+<h4>Update recipe</h4> <br>
+
+`PUT /recipes/:id` <br>
 Parameters: <br>
 
 ```json
