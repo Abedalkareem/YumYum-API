@@ -2,7 +2,7 @@
 
 <h2>Recipes</h2>
 
-<h4>Get all recipes</h4><br>
+<h4>-Get all recipes</h4> 
 
 `GET /recipes` <br>
 will return:
@@ -40,15 +40,15 @@ will return:
 }
 ```
 
-<h4>Add new recipe</h4> <br>
+<h4>-Add new recipe</h4> <br>
 
 `POST /recipes` <br>
 Parameters: <br>
 
 ```json
 {
-"name":"lolox",
-"description":"koko",
+"name":"JORDANIAN MANSAF",
+"description":"Lamb mansaf, cooked in fermented yoghurt called jameed",
 "duration":20,
 "image":"image",
 "steps_attributes":[{"order": 1, "description": "Wash meat cubes and place in tray with lid", "image":""}],
@@ -56,15 +56,15 @@ Parameters: <br>
 }
 ```
 
-<h4>Update recipe</h4> <br>
+<h4>-Update recipe</h4> <br>
 
 `PUT /recipes/:id` <br>
 Parameters: <br>
 
 ```json
 {
-"name":"lolox",
-"description":"koko",
+"name":"JORDANIAN MANSAF",
+"description":"Lamb mansaf, cooked in fermented yoghurt called jameed",
 "duration":20,
 "image":"image",
 "steps_attributes":[{"order": 1, "description": "Wash meat cubes and place in tray with lid", "image":""}],
