@@ -6,7 +6,6 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-
 		@recipe = Recipe.new(recipes_params)
 		if @recipe.save 
 		  json_response @recipe.as_json(include:[:steps,:ingredients]), :created
@@ -15,6 +14,14 @@ class RecipesController < ApplicationController
 		end
 	end
 
+	def update
+		@recipe = Recipe.find(params[:id])
+		if @recipe.update(recipes_params)
+		  json_response @recipe.as_json(include:[:steps,:ingredients]), :created
+		else
+		  json_response nil, :internal_server_error 
+		end
+	end
 
 	private 
 
