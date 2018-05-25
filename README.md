@@ -40,7 +40,7 @@ will return:
 }
 ```
 
-<h4>-Add new recipe</h4> <br>
+<h4>-Add new recipe</h4>
 
 `POST /recipes` <br>
 Parameters: <br>
@@ -56,7 +56,7 @@ Parameters: <br>
 }
 ```
 
-<h4>-Update recipe</h4> <br>
+<h4>-Update recipe</h4>
 
 `PUT /recipes/:id` <br>
 Parameters: <br>
