@@ -1,24 +1,103 @@
-# README
+# YumYum-API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h2>Recipes</h2>
 
-Things you may want to cover:
+<h4>-Get all recipes</h4> 
 
-* Ruby version
+`GET /recipes` <br>
+Response:
 
-* System dependencies
+```json
+{
+    "id": 6,
+    "name": "JORDANIAN MANSAF",
+    "description": "Lamb mansaf, cooked in fermented yoghurt called jameed",
+    "duration": 60,
+    "image": null,
+    "user_id": null,
+    "created_at": "2018-05-25T08:38:42.169Z",
+    "updated_at": "2018-05-25T08:38:42.169Z",
+    "steps": [
+        {
+            "id": 14,
+            "order": 1,
+            "description": "Wash meat cubes and place in tray with lid",
+            "image": null,
+            "recipe_id": 6,
+            "created_at": "2018-05-25T08:38:42.171Z",
+            "updated_at": "2018-05-25T08:38:42.171Z"
+        }
+    ],
+    "ingredients": [
+        {
+            "id": 6,
+            "description": "Jameed",
+            "created_at": "2018-05-25T08:38:42.174Z",
+            "updated_at": "2018-05-25T08:38:42.174Z",
+            "recipe_id": 6
+        }
+    ]
+}
+```
 
-* Configuration
+<h4>-Add new recipe</h4>
 
-* Database creation
+`POST /recipes` <br>
+Parameters: <br>
 
-* Database initialization
+```json
+{
+"name":"JORDANIAN MANSAF",
+"description":"Lamb mansaf, cooked in fermented yoghurt called jameed",
+"duration":20,
+"image":"image",
+"steps_attributes":[{"order": 1, "description": "Wash meat cubes and place in tray with lid", "image":""}],
+"ingredients_attributes":[{"description": "Jameed"}]
+}
+```
 
-* How to run the test suite
+<h4>-Update recipe</h4>
 
-* Services (job queues, cache servers, search engines, etc.)
+`PUT /recipes/:id` <br>
+Parameters: <br>
 
-* Deployment instructions
+```json
+{
+"name":"JORDANIAN MANSAF",
+"description":"Lamb mansaf, cooked in fermented yoghurt called jameed",
+"duration":20,
+"image":"image",
+"steps_attributes":[{"order": 1, "description": "Wash meat cubes and place in tray with lid", "image":""}],
+"ingredients_attributes":[{"description": "Jameed"}]
+}
+```
 
-* ...
+<h4>-Delete recipe</h4>
+
+`DELETE /recipes/:id` <br>
+Response:
+
+```json
+{
+    "message": "Recipe deleted"
+}
+```
+
+# TODO
+- Add user
+- Edit user
+- Get user
+- Authentication
+- Recipes by user
+- Edit step
+- Delete step
+- Edit ingredient
+- Delete ingredient
+- Add rating 
+- Delete rating 
+- Edit rating
+- Get ratings
+- Add keywords for recipes
+- Search for recipes
+
+
